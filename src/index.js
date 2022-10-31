@@ -1,10 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import App from "./App";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import About from "./About";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
     <HashRouter>
       <Routes>
@@ -12,6 +13,5 @@ ReactDOM.render(
         <Route path="/about" element={<About />} />
       </Routes>
     </HashRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
